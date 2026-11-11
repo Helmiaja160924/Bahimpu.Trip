@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NusantaraTrip - Pendaftaran Open Trip Terbaik</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-teal-600">⛰️ NusantaraTrip</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#beranda" class="text-teal-600 hover:text-teal-700">Beranda</a>
+                <a href="#destinasi" class="text-slate-600 hover:text-teal-700">Destinasi</a>
+                <a href="#pendaftaran" class="text-slate-600 hover:text-teal-700">Pendaftaran</a>
+            </nav>
+            <div>
+                <a href="#pendaftaran" class="bg-teal-600 text-white px-5 py-2.5 rounded-full font-medium shadow-md hover:bg-teal-700 transition">Daftar Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative bg-teal-900 text-white py-24 px-4 sm:px-6 lg:px-8 bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="bg-teal-500/20 text-teal-300 px-4 py-1.5 rounded-full text-sm font-semibold border border-teal-500/30">Jelajahi Keindahan Alam Bersama Kami</span>
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight">Open Trip Seru & Hemat Tanpa Ribet</h1>
+            <p class="text-lg text-slate-200 max-w-2xl mx-auto">Temukan teman baru, nikmati destinasi impian dengan fasilitas lengkap dan harga terjangkau bersama pemandu profesional.</p>
+            <div class="pt-4">
+                <a href="#destinasi" class="bg-amber-500 text-slate-900 font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-amber-400 transition inline-block">Lihat Pilihan Paket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinasi / Paket Open Trip -->
+    <section id="destinasi" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-slate-900">Destinasi Open Trip Pilihan</h2>
+            <p class="text-slate-600 mt-2">Pilih petualangan favoritmu bulan ini dengan jadwal keberangkatan pasti.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Paket 1 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bromo" class="h-56 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold bg-teal-50 text-teal-700 px-3 py-1 rounded-full">Jawa Timur</span>
+                        <span class="text-sm font-bold text-teal-600">Rp 650.000 / orang</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Sunrise Bromo & Madakaripura</h3>
+                    <p class="text-sm text-slate-600">Nikmati keindahan matahari terbit di Bromo dan kesegaran air terjun Madakaripura. (2 Hari 1 Malam)</p>
+                    <button onclick="pilihPaket('Sunrise Bromo & Madakaripura')" class="w-full bg-slate-100 text-teal-700 font-semibold py-2.5 rounded-xl hover:bg-teal-600 hover:text-white transition">Pilih Paket Ini</button>
+                </div>
+            </div>
+
+            <!-- Paket 2 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="Nusa Penida" class="h-56 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold bg-teal-50 text-teal-700 px-3 py-1 rounded-full">Bali</span>
+                        <span class="text-sm font-bold text-teal-600">Rp 1.250.000 / orang</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Explore Nusa Penida & Snorkeling</h3>
+                    <p class="text-sm text-slate-600">Kunjungi Kelingking Beach, Broken Beach, dan spot snorkeling terbaik di Nusa Penida. (3 Hari 2 Malam)</p>
+                    <button onclick="pilihPaket('Explore Nusa Penida & Snorkeling')" class="w-full bg-slate-100 text-teal-700 font-semibold py-2.5 rounded-xl hover:bg-teal-600 hover:text-white transition">Pilih Paket Ini</button>
+                </div>
+            </div>
+
+            <!-- Paket 3 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-
